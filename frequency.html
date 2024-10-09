@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="string">Enter the string</label>
+    <input type="text" name="" id="string" placeholder="eneter the string">
+    <button onclick="CheckCount()">Check</button>
+    <p id="result"></p>
+    <script>
+        function CheckCount(){
+        let str = document.getElementById('string').value
+        let frequency = {};
+        for (let char of str){
+            frequency[char] = (frequency[char] || 0 ) + 1
+        }
+        document.getElementById('result').innerText = JSON.stringify(frequency)
+    }
+    </script>
+</body>
+</html>
